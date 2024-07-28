@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Logger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Time Logger</h2>
+        <div class="days-container">
+            <div class="day">
+                <h3>Today</h3>
+                <p>{{ day0 }}</p>
+            </div>
+            <div class="day">
+                <h3>Yesterday</h3>
+                <p>{{ day1 }}</p>
+            </div>
+            <div class="day">
+                <h3>{{ day2_name }}</h3>
+                <p>{{ day2 }}</p>
+            </div>
+            <div class="day">
+                <h3>{{ day3_name }}</h3>
+                <p>{{ day3 }}</p>
+            </div>
+            <div class="day">
+                <h3>{{ day4_name }}</h3>
+                <p>{{ day4 }}</p>
+            </div>
+            <div class="day">
+                <h3>{{ day5_name }}</h3>
+                <p>{{ day5 }}</p>
+            </div>
+            <div class="day">
+                <h3>{{ day6_name }}</h3>
+                <p>{{ day6 }}</p>
+            </div>
+        </div>
+        <h2>Total Time Today: <span id="total-time">{{ total_time }}</span></h2>
+        <form method="POST">
+            <button type="submit" class="{{ button_class }}">{{ button_text }}</button>
+        </form>
+    </div>
+</body>
+</html>
